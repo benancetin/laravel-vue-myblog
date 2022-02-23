@@ -1,61 +1,77 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Laravel-Vue-Myblog (SPA)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+## Overview;
+A simple blog webpage (SPA) that was created by using laravel and vue.
 
-## About Laravel
+## The Screenshots;
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+![Front Page](https://user-images.githubusercontent.com/36122669/155361637-e4307365-4873-48e4-bfa6-8267efa42fba.png?raw=true "Front Page")
+![New Comment Page](https://user-images.githubusercontent.com/36122669/155361658-a334c638-db81-446b-ad1d-7b1538d10625.png?raw=true "New Comment Page")
+![Reply Comment Page](https://user-images.githubusercontent.com/36122669/155361670-3c79a1bf-0291-4280-8730-6223ece0d67a.png?raw=true "Reply Comment Page")
+![Unit Test](https://user-images.githubusercontent.com/36122669/155363087-350f702d-ad6e-4746-b72c-f1ee8d432797.png?raw=true "Unit Test")
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Technical Specifications;
+Docker was not asked but because I'm using docker for my test environment the system was tested on a docker engine that's running on Ubuntu. Mysql server was also a docker container.
 
-## Learning Laravel
+- Laravel Version : 7.30.6
+- Vue : 2.6.14
+- PHP : 7.3
+- MySql : 8.0
+- Server : Ubuntu 20.04.1 LTS
+- Docker : 20.10.7
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Notes About Code;
+Followed PSR-2 code standards for coding. (Tested them with the "phpcs" package on linux terminal.)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### Date and time
+I usually store full date and time in the database, and format it according to place I use. For this purpose I have used the "moment" package for vue.
 
-## Laravel Sponsors
+#### For Validation;
+Vue validation can be used to validate insert parameters. To keep things simple I have used laravel validation that is working with vue. Any error that laravel validation gives will be printed by vue.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### The template;
+I could use template for the front end, instead I have used bootstrap functions to create a simple responsive page.
 
-### Premium Partners
+## Installation;
+To install the container can be created by the command;
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+```bash
+docker-compose up --build -d
+```
+```bash
+docker exec -it myblog.test /bin/bash
+```
+```bash
+composer install
+```
+And inside the container, The migrations can be created by;
 
-## Contributing
+```bash
+php artisan migrate
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Then npm packages can be installed by;
 
-## Code of Conduct
+```bash
+npm install
+```
+And to run;
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+npm run dev for development
+```
+```bash
+npm run build for production
+```
 
-## Security Vulnerabilities
+## What else could be done;
+#### Nested Comments;
+For the nested comments recursive components or child components can be used. I could do that, but since I have limited time I have used a straight list.
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+#### Pop-up Modal;
+For creating comments the submit form can be a modal that slides down or a pop-up modal that shows up on click. But to keep things simple I have used another vue template that appears on click.
 
-## License
+#### Jest for Unit Tests;
+To test vue components Jest could be used.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

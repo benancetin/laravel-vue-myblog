@@ -17,7 +17,7 @@
                         <label>Comment</label>
                         <input type="text" class="form-control" v-model="comment.body">
                     </div>
-                    <button type="submit" class="btn btn-primary">Add Comment</button>
+                    <button type="submit" class="btn btn-dark">Add</button>
                 </form>
             </div>
         </div>

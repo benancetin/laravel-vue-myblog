@@ -39,20 +39,17 @@
                 <div class="col-xs-12 col-12 col-md-12 col-lg-8">
                     <h5 class="text-white p-1" style="background-color:black;">Blog Post</h5>
                     <p>
-                    We, at Aloware, saw one thing that most contact center solutions are missing: the importance of building personal relationships. With the many ways we can communicate and the wealth of the data we can gather, many things in business are reduced to numbers. <br/>
-                    We seek to humanize the demand around sales with automation that frees up time, so there is more opportunity to talk to customers and make genuine connections. We believe that businesses also win in trust and loyalty. <br/>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
                     </p>
                     <p>
-                    Aloware didn’t start out of a garage, as your typical silicon valley startup goes. We started in sunny Los Angeles, on top of Anoosh’s and Sohrab’s expertise as consultants in the contact center and cloud communication space.
+                    Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
                     </p>
                     <p>
-                    Before Aloware, our founders were already helping companies embrace new communication channels to support customers. From migrating phone stacks to the cloud to automating common follow-up tasks, they have helped many businesses modernize.
+                    Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
                     </p>
                     <router-view></router-view>
                 </div>
             </div>
-
-
         </div>
         <br/>
     </div>
